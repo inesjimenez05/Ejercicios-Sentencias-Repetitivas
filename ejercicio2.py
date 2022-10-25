@@ -14,7 +14,15 @@ import random
 
 numero= random.randint(1,100)
 num=int(input("Di un numero \n"))
+contador=1
 
-while (numero != num):
+
+
+while (num!=numero) and (contador<10):
     if (num<numero):
-        print("El numero es menor")
+            print("El numero es mayor")
+    if (num>numero):
+            print("El numero es menor")
+    contador=contador+1
+    print ("Número de intentos: ",contador)
+    num=int(input("Di otro numero \n"))
