@@ -8,11 +8,12 @@ introducidos
 num=int(input("Di un numero \n"))
 suma=0 
 media=0
-numero=1
+numero=0
 
 while (num!=0):
     suma= num+suma
     numero=numero+1
-    print (suma)
     num=int(input("Di un numero: \n"))
-    print (suma/numero)
+
+print ("La suma es", suma)
+print ("La media es",suma/numero)
