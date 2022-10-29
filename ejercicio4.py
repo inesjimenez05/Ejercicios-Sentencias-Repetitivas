@@ -6,10 +6,26 @@ debe informar de cuantos números introducidos son mayores
 que 0, menores que 0 e iguales a 0.
 '''
 
-print("Diga 4 números: ")
+import random
 
-num1=int(input("\n"))
-num2=int(input("\n"))
-num3=int(input("\n"))
-num4=int(input("\n"))
+numeros= random.randint(1,10)
+vNum=[]
+numero=0
+negativos=0
+positivos=0
+iguala0=0
 
+print("Diga ",numeros, "numeros:")
+
+for num in range (0,numeros):
+    numero=int(input("\n"))
+    vNum.append(numero)
+    
+    if (numero<0):
+        negativos=negativos+1
+    elif (numero==0):
+        iguala0=iguala0+1
+    else:
+        positivos=positivos+1
+
+print ("\n Hay ",positivos, "numeros positivos, ", negativos, "numeros negativos, ", iguala0, "numeros iguales a 0")
