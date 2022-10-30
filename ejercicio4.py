@@ -9,7 +9,6 @@ que 0, menores que 0 e iguales a 0.
 import random
 
 numeros= random.randint(1,10)
-vNum=[]
 numero=0
 negativos=0
 positivos=0
@@ -19,7 +18,6 @@ print("Diga ",numeros, "numeros:")
 
 for num in range (0,numeros):
     numero=int(input("\n"))
-    vNum.append(numero)
     
     if (numero<0):
         negativos=negativos+1
