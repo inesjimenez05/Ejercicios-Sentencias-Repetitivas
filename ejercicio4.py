@@ -6,9 +6,8 @@ debe informar de cuantos números introducidos son mayores
 que 0, menores que 0 e iguales a 0.
 '''
 
-import random
 
-numeros= random.randint(1,10)
+numeros= int(input("Cantidad de numeros a introducir: \n"))
 numero=0
 negativos=0
 positivos=0
