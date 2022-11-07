@@ -9,6 +9,7 @@ es divisible por algún otro número.
 num=int(input("Di un numero:"))
 raiz=int(num**(1/2))
 divisible=0
+numero=0
 
 for numero in range (1, raiz+1):
     if(num%numero==0):
