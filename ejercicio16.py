@@ -6,7 +6,15 @@ trabajadores y, además, calcule cuánto pagó la empresa por los N empleados.
 '''
 
 numEmpleados=int(input("Numero de empleados: "))
-numHoras=int(input("Horas trabajadas a la semana: "))
+numHoras=int(input("Horas trabajadas al dia: "))
 sueldoHoras=int(input("Sueldo por hora: "))
+sueldo=0
+sueldototal=0
 
-#for i in range (0,6):
+
+for i in range (0,5):
+    sueldo+=(sueldoHoras*numHoras)
+
+sueldototal= numEmpleados*sueldo
+print(f"El sueldo semanal de un empleado es de {sueldo}")
+print(f"La empresa ha pagado {sueldototal} por los {numEmpleados} empleados")

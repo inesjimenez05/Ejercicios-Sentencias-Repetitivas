@@ -18,4 +18,4 @@ for num in range (0,20):
     mes+=1
     suma+=pago
 
-print (f"\n En total ha pagado {suma}")
+print (f"\nEn total ha pagado {suma}")
