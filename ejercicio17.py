@@ -11,10 +11,17 @@ diastrabajados=int(input("Días trabajados: "))
 sueldo=0
 empleados=int(input("Numero empleados: "))
 sueldohora=int(input("Sueldo hora: "))
+sueldototal=0
 
-for i in range (1, diastrabajados+1):
-    horastrabajadas=int(input(f"Horas trabajadas el {i} día:"))
-    sueldo=sueldo+(horastrabajadas*sueldohora)
 
-print("El sueldo semanal de un empleado es de ", sueldo)
-print(f"La empresa paga a la semana {sueldo*empleados} por {empleados} empleados")
+for num in range (1, empleados+1):
+    sueldo=0
+    for i in range (1, diastrabajados+1):
+        horastrabajadas=int(input(f"Horas trabajadas el {i} día: por el {num} trabajador: "))
+        sueldo=sueldo+(horastrabajadas*sueldohora)
+        sueldosemanal=sueldo
+    print(f"El sueldo semanal del empleado {num} es de {sueldo}")
+    sueldototal+=sueldo
+
+
+print(f"La empresa paga a la semana {sueldototal} por {empleados} empleados")
