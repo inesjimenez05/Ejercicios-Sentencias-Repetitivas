@@ -6,16 +6,15 @@ unidad. Nota: Es suficiente probar hasta la raíz cuadrada del número para ver 
 es divisible por algún otro número.
 '''
 
-num=int(input("Di un numero:"))
-raiz=int(num**(1/2))
-divisible=0
-numero=0
+def primos(numero:int):
+    for i in range (2,numero):
+        if (numero%i==0):
+            return False
+    return(True)
 
-for numero in range (1, raiz+1):
-    if(num%numero==0):
-        divisible+=1
+numero=int(input("Dime un numero: "))
 
-if (divisible==1):
-    print (f"{num} es primo")
+if primos(numero):
+    print(f"{numero} es primo")
 else:
-    print(f"{num} no es primo")
+    print(f"{numero} no es primo")
