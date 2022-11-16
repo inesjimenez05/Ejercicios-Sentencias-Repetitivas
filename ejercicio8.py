@@ -13,20 +13,45 @@ Cuando termine el programa dará las siguientes informaciones:
 del intervalo
 '''
 
-inferior= int(input("Di el límite inferior: \n"))
-superior= int(input("Di el límite superior: \n"))
-suma=0
 
-while (inferior>superior):
-    inferior= int(input("Ponga un límite inferior menor al superior: \n"))
-    
+limiteinferior=5
+limitesuperior=2
 
-numeros=int(input("Di un numero: \n"))
+def operacionesNumeros(vNum,limiteinferior,limitesuperior):
+    num=0
+    #SUMA, NUMEROS FUERA E IGUALES AL LIMITE
+    suma=0
+    fuera=0
+    igualLimite=0
+    vLimites= list(range(limiteinferior+1,limitesuperior))
+    for num in (vNum):
+        if num in vLimites:
+            suma+=num
+        else:
+            fuera+=1
+        if (num==limiteinferior or num==limitesuperior):
+            igualLimite+=1
 
-while (numeros!=0):
-    vNumeros=[]
-    vNumeros.append(numeros)
-    numeros=int(input("Di un numero: \n"))
+    print(f"{suma}: es la suma de los numeros dentro del intervalo, {fuera}: cantidad de numeros fuera del intervalo, {igualLimite}: cantidad de numeros iguales a los limites")
 
-for vNumeros in range (inferior, superior):
-    print ("\n",vNumeros)
+
+def pideNumeros ():
+    listaNum= []
+    num=2
+    while num!=0:
+        num=int(input("Introduce un numero: "))
+        listaNum.append(num)
+
+    return(listaNum)
+
+
+while (limiteinferior > limitesuperior):
+    try:
+        limiteinferior=int(input("Escribe el valor del limite inferior: "))
+        limitesuperior= int(input("Escribe el valor del limite superior: "))
+    except:
+        print("Escribe el valor de los limites: ")
+
+vNum=pideNumeros()
+operacionesNumeros(vNum,limiteinferior,limitesuperior)
+
